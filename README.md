@@ -2,7 +2,7 @@
 
 Every day, I share a short **LinkedIn post** explaining a **Machine Learning** concept. This repository keeps track of all the topics covered, with additional code snippets and explanations.  
 
-📍 **Follow my posts here:** [🔗 My LinkedIn Profile](www.linkedin.com/in/dina-ouahbi-963a56338)  
+📍 **Follow my posts here:** [🔗 My LinkedIn Profile](https://www.linkedin.com/in/dina-ouahbi-963a56338/)  
 
 ## **📌 Topics Covered**  
 ✅ **Multiclass Logistic Regression** 
