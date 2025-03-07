@@ -145,6 +145,10 @@ merge = pd.concat([
 merge.head()
 
 # %%
+species = merge.select_dtypes('float').columns
+
+# %%
+
 X = merge.select_dtypes('float').values
 y = merge['disease'].values
 
@@ -157,6 +161,25 @@ from sklearn.ensemble import RandomForestClassifier # for multiple algorithm (th
 model = RandomForestClassifier(n_estimators=25)
 model.fit(X_train, y_train)
 
+
+# %%
+feature_scores[:100]
+
+# %%
+feature_scores = pd.Series(model.feature_importances_, index=species).sort_values(ascending=False)[:15]
+
+# Creating a seaborn bar plot
+
+sns.barplot(x=feature_scores, y=feature_scores.index)
+# Add labels to the graph
+
+plt.xlabel('Feature Importance Score')
+plt.ylabel('Species')
+# Add title to the graph
+plt.title("Visualizing Important Features")
+# Visualize the graph
+plt.savefig('issues/RF_feat_omportance_cirrhosis_ds.png', dpi=300)
+plt.show()
 
 # %%
 model.score(X_test, y_test)
