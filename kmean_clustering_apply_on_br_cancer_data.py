@@ -62,7 +62,6 @@ plt.show()
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-%matplotlib inline
 from matplotlib import cm
 import seaborn as sns; sns.set()
 import scipy
