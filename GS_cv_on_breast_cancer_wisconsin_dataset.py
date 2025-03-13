@@ -190,10 +190,10 @@ df
 #df = pd.DataFrame(scores,columns=['model','best_score','best_params'])
 
 sns.barplot(x='best_score', y='model', data=df, palette='viridis')
-
+plt.subplots_adjust(left=0.30) 
 plt.xlabel("Score")
 plt.ylabel("models")
-plt.title("Comparaison des performances des modèles")
+plt.title("Best Model Accuracy Comparison")
 plt.savefig('issues/GS_cv.png')
 plt.show()
 
